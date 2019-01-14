@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { link } from "./Mixins";
 
 export const GlobalStyle = createGlobalStyle`
   /*
@@ -96,7 +97,48 @@ export const GlobalStyle = createGlobalStyle`
 
 export const MainContainer = styled.main`
   width: 100%;
-  min-height: 100vh;
   padding-top: 200px;
-  padding-left: 500px;
+`;
+
+export const PageHeader = styled.header`
+  width: calc(100% - 550px);
+  margin-left: 400px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  h1 {
+    font-size: var(--main-heading);
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: var(--header-sub-heading);
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: var(--main-text);
+    line-height: 28px;
+  }
+  section {
+    &:first-child {
+      max-width: 700px;
+    }
+  }
+`;
+
+export const ContentNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  a {
+    ${link("1.6rem", "var(--blue)")};
+    margin-bottom: 30px;
+    &:hover {
+      color: var(--blue-hover);
+    }
+    &:active {
+      color: var(--blue-active);
+    }
+  }
 `;

@@ -9,8 +9,9 @@ function TopHeader(props) {
         <p>LOGO</p>
       </div>
       <nav>
-        <Link className="link" to="/about">
-          About
+        {/* Links and sensitive stuff */}
+        <Link className="link" to="/login">
+          Team Login
         </Link>
       </nav>
     </MainHeader>
